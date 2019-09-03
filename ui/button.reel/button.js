@@ -261,7 +261,7 @@ var Button = exports.Button = NativeControl.specialize(/** @lends module:"montag
     handlePress: {
         value: function(event) {
             this.active = false;
-            this._dispatchActionEvent();
+            this.dispatchActionEvent();
             document.removeEventListener("touchmove", this, false);
         }
     },
@@ -271,7 +271,7 @@ var Button = exports.Button = NativeControl.specialize(/** @lends module:"montag
             // action event on spacebar
             if (event.keyCode === 32) {
                 this.active = false;
-                this._dispatchActionEvent();
+                this.dispatchActionEvent();
             }
         }
     },
